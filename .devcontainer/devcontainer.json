@@ -10,8 +10,8 @@
 				"vscjava.vscode-java-pack",
 				"cweijan.dbclient-jdbc",
 				"cweijan.vscode-postgresql-client2",
-        "vscjava.vscode-lombok",
-        "redhat.vscode-quarkus"
+				"vscjava.vscode-lombok",
+				"redhat.vscode-quarkus"
 			],
 			"settings": {
 				"editor.fontSize": 13,
