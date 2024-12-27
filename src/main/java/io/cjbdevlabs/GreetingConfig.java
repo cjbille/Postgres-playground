@@ -1,5 +1,7 @@
 package io.cjbdevlabs;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
 import jakarta.enterprise.context.ApplicationScoped;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,5 +10,7 @@ import lombok.Setter;
 @Setter
 @ApplicationScoped
 public class GreetingConfig {
-    String recpient = "LinkedIn Learning Students";
+
+    @ConfigProperty(name = "application.greeting.recipient", defaultValue = "Students")
+    String recpient;
 }
