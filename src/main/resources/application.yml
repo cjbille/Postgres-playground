@@ -5,10 +5,10 @@ quarkus:
     db-kind: postgresql
     jdbc:
       max-size: 16
-      url: jdbc:postgresql://localhost:5432/some-database
+      url: jdbc:postgresql://localhost:5432/postgres
   hibernate-orm:
     database:
-      generation: non
+      generation: none
 application:
   greeting:
     recipient: "LinkedIn Learning Students"
