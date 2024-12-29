@@ -8,7 +8,6 @@ import lombok.extern.jbosslog.JBossLog;
 @JBossLog
 @QuarkusMain
 public class Main {
-
     public static void main(String... args) {
         Quarkus.run(MyApp.class, args);
     }
