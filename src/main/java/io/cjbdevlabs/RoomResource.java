@@ -19,5 +19,4 @@ public class RoomResource {
     public List<Room> getRooms() {
         return roomService.getRooms();
     }
-    
 }

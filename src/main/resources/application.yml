@@ -1,4 +1,6 @@
 quarkus:
+  swagger-ui:
+    enable: true
   datasource:
     username: postgres
     password: postgres
@@ -8,8 +10,16 @@ quarkus:
       url: jdbc:postgresql://localhost:5432/postgres
   hibernate-orm:
     database:
-      generation: none
+      generation: update
 application:
   greeting:
-    recipient: "LinkedIn Learning Students"
+    recipient: Java devs of the world
 rooms-api/mp-rest/url: http://localhost:8080
+mp:
+  openapi:
+    extensions:
+      smallrye:
+        info:
+          title: Postgres Java Playground
+          version: 1.0.0
+          description: Learning Postgres and Hibernate
