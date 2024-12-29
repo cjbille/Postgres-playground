@@ -1,9 +1,6 @@
 package io.cjbdevlabs;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-
-import javax.sql.DataSource;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import io.quarkus.arc.Arc;
 import io.quarkus.runtime.Quarkus;
@@ -22,9 +19,13 @@ public class Main {
     }
 
     public static class MyApp implements QuarkusApplication {
-        
+
         @Inject
         EntityManager entityManager;
+
+        @Inject
+        @RestClient
+        RoomServiceRest roomServiceRest;
         
         @Override
         public int run(String... args) throws Exception {
