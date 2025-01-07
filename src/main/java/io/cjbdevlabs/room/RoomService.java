@@ -10,6 +10,6 @@ public class RoomService {
     
     @Transactional
     public List<Room> getRooms() {
-        return Room.listAll();
+        return Room.findAllRooms();
     }
 }
