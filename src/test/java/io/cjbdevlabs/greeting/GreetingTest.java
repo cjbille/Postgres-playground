@@ -1,4 +1,4 @@
-package io.cjbdevlabs;
+package io.cjbdevlabs.greeting;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
@@ -8,6 +8,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 
 @QuarkusTest
 class GreetingTest {
+    
     @Test
     void testHelloEndpoint() {
         given()
