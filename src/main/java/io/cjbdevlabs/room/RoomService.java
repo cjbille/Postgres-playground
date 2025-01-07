@@ -1,4 +1,4 @@
-package io.cjbdevlabs;
+package io.cjbdevlabs.room;
 
 import java.util.List;
 

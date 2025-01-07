@@ -1,4 +1,4 @@
-package io.cjbdevlabs;
+package io.cjbdevlabs.greeting;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;

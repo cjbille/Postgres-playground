@@ -1,4 +1,4 @@
-package io.cjbdevlabs;
+package io.cjbdevlabs.greeting;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
