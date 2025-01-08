@@ -16,6 +16,7 @@
 			"settings": {
 				"editor.fontSize": 13,
 				"editor.minimap.enabled": false,
+				"editor.stickyScroll.enabled": false,
 				"java.server.launchMode": "Standard"
 			}
 		}
