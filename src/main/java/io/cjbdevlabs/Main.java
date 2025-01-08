@@ -3,8 +3,6 @@ package io.cjbdevlabs;
 import io.quarkus.runtime.Quarkus;
 import io.quarkus.runtime.QuarkusApplication;
 import io.quarkus.runtime.annotations.QuarkusMain;
-import jakarta.inject.Inject;
-import jakarta.persistence.EntityManager;
 import lombok.extern.jbosslog.JBossLog;
 
 @JBossLog
@@ -15,13 +13,6 @@ public class Main {
     }
 
     public static class MyApp implements QuarkusApplication {
-
-        // @Inject
-        // @RestClient
-        // RoomServiceRest roomServiceRest;
-
-        @Inject
-        EntityManager entityManager;
         
         @Override
         public int run(String... args) throws Exception {

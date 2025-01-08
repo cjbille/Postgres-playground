@@ -7,10 +7,12 @@ quarkus:
     db-kind: postgresql
     jdbc:
       max-size: 16
-      url: jdbc:postgresql://localhost:5432/postgres
+      url: jdbc:postgresql://localhost:5432/library
   hibernate-orm:
     database:
       generation: update
+  flyway:
+    migrate-at-start: true
 application:
   greeting:
     recipient: Java devs of the world
