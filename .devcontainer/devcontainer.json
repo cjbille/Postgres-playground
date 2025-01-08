@@ -9,7 +9,7 @@
 			"extensions": [
 				"vscjava.vscode-java-pack",
 				"cweijan.dbclient-jdbc",
-				"cweijan.vscode-postgresql-client2",
+				"cweijan.vscode-database-client2",
 				"vscjava.vscode-lombok",
 				"redhat.vscode-quarkus"
 			],
