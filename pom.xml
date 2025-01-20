@@ -32,6 +32,11 @@
                 <version>1.18.36</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>io.quarkiverse.primefaces</groupId>
+                <artifactId>quarkus-primefaces-extensions</artifactId>
+                <version>3.14.8</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -75,6 +80,10 @@
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-smallrye-openapi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkiverse.primefaces</groupId>
+            <artifactId>quarkus-primefaces-extensions</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
