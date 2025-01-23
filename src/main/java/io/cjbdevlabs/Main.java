@@ -1,9 +1,12 @@
 package io.cjbdevlabs;
 
+import io.cjbdevlabs.library.Author;
 import io.cjbdevlabs.library.Book;
+import io.cjbdevlabs.library.BookService;
 import io.quarkus.runtime.Quarkus;
 import io.quarkus.runtime.QuarkusApplication;
 import io.quarkus.runtime.annotations.QuarkusMain;
+import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import lombok.extern.jbosslog.JBossLog;
 
@@ -15,14 +18,13 @@ public class Main {
     }
 
     public static class MyApp implements QuarkusApplication {
+
+        @Inject
+        BookService bookService;
         
         @Override
-        @Transactional
         public int run(String... args) throws Exception {
-            Book book = Book.find("isbn = ?1", "978-0358439196").firstResult();
-            log.infof("found book : %s", book);
-
-            log.info("Starting Quarkus App");
+            // bookService.saveBook();
             Quarkus.waitForExit();
             return 0;
         }
