@@ -16,12 +16,10 @@ public class BookService {
 
     @Transactional
     public void saveBook() {
-        Author author = Author.find("name", "J.R.R. Tolkien").firstResult();
-        log.infof("found author : %s", author);
-        var newBook = new Book();
-        newBook.setIsbn("978-0395177112");
-        newBook.setName("The Hobbit");
-        newBook.setAuthor(author);
-        newBook.persist();
+        Book book = Book.find("name", "The Hobbit").firstResult();
+        var review = new Review();
+        review.setBook(book);
+        review.setComment("A great look into how LOTR began!");
+        review.persist();
     }
 }

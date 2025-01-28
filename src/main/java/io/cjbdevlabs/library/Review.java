@@ -2,7 +2,8 @@ package io.cjbdevlabs.library;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,10 +12,11 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
-public class Author extends PanacheEntity {
+public class Review extends PanacheEntity {
 
-    private String name;
+    private String comment;
 
-    @OneToOne(mappedBy = "author")
+    @ManyToOne
+    @JoinColumn(name = "book_id")
     private Book book;
 }
