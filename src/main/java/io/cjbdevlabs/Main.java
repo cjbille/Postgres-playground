@@ -1,6 +1,6 @@
 package io.cjbdevlabs;
 
-import io.cjbdevlabs.library.BookService;
+import io.cjbdevlabs.library.CategoryService;
 import io.quarkus.runtime.Quarkus;
 import io.quarkus.runtime.QuarkusApplication;
 import io.quarkus.runtime.annotations.QuarkusMain;
@@ -17,11 +17,11 @@ public class Main {
     public static class MyApp implements QuarkusApplication {
 
         @Inject
-        BookService bookService;
+        CategoryService categoryService;
         
         @Override
         public int run(String... args) throws Exception {
-            // bookService.saveBook();
+            categoryService.createCategory();
             Quarkus.waitForExit();
             return 0;
         }
