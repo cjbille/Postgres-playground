@@ -1,5 +1,6 @@
 package io.cjbdevlabs.library;
 
+import io.quarkus.narayana.jta.runtime.TransactionConfiguration;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.transaction.Transactional;
 import lombok.extern.jbosslog.JBossLog;
@@ -21,7 +22,19 @@ public class CategoryService {
         subCategory2.setName("Slasher");
         subCategory2.setPrimaryCategory(primaryCategory);
 
+        var subCategory3 = new Category();
+        subCategory3.setName("Monster");
+        subCategory3.setPrimaryCategory(primaryCategory);
+
         subCategory1.persist();
         subCategory2.persist();
+        subCategory3.persist();
+    }
+
+    @Transactional
+    public void retrieveCategories() {
+        Category primaryCategory = Category.find("name", "Horror").firstResult();
+        log.infof("primary category is : %s", primaryCategory.getName());
+        primaryCategory.getSubCategories().forEach(subCategory -> log.infof("sub category is : %s", subCategory.getName()));
     }
 }
