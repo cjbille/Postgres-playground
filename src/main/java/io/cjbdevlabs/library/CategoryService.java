@@ -1,6 +1,5 @@
 package io.cjbdevlabs.library;
 
-import io.quarkus.narayana.jta.runtime.TransactionConfiguration;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.transaction.Transactional;
 import lombok.extern.jbosslog.JBossLog;
