@@ -17,7 +17,11 @@
 				"editor.fontSize": 13,
 				"editor.minimap.enabled": false,
 				"editor.stickyScroll.enabled": false,
-				"java.server.launchMode": "Standard"
+				"java.server.launchMode": "Standard",
+				"java.compile.nullAnalysis.mode": "disabled",
+				"java.configuration.updateBuildConfiguration": "interactive",
+				"terminal.integrated.shellIntegration.enabled": false,
+				"extensions.ignoreRecommendations": true
 			}
 		}
 	}
