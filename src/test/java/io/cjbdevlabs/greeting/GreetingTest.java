@@ -17,5 +17,4 @@ class GreetingTest {
              .statusCode(200)
              .body(containsString("Hello"));
     }
-
 }
