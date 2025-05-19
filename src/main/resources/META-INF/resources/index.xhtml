@@ -8,6 +8,11 @@
         <h1>Hello Jakarta Faces</h1>
     </h:head>
     <h:body>
-        <p:textEditor />
+        <h:form>
+            <p:commandButton disabled="true" value="Save" action="#{indexBean.saveBook()}" styleClass="ui-button-raised"/>
+            <ui:repeat value="#{indexBean.getBooks()}" var="book">
+                <h:outputText value="#{book.name}"/>
+            </ui:repeat>
+        </h:form>
     </h:body>
 </html>
